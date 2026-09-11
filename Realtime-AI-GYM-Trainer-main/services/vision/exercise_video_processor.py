@@ -61,7 +61,7 @@ class VideoProcessorClass(VideoProcessorBase):
         with self._lock:
             return self._exercise_type
         
-    def _draw_skeleton(self, img, landmarks):
+    def _draw_skeleton(self, img, landmarks):   #for creating line in img
         h, w = img.shape[:2]
 
         for start_idx, end_idx in POSE_CONNECTIONS:
@@ -85,9 +85,9 @@ class VideoProcessorClass(VideoProcessorBase):
                     8,
                     (255, 0, 0),
                     -1
-                )
+                ) 
             
-    def _draw_no_pose_warnings(self, img):
+    def _draw_no_pose_warnings(self, img):   #for no pose detection warning
         cv2.putText(
             img,
             "NO POSE DETECTED",

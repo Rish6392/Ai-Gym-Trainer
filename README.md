@@ -105,9 +105,21 @@ Get your free Groq API key at: https://console.groq.com
 
 ### 5. Run the app
 
-```bash
-streamlit run main.py
-```
+
+### Agar venv activate karke chalana ho
+
+README mein ye bhi likh sakte ho:
+
+```markdown
+### Alternative: Activate Virtual Environment
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m streamlit run main.py
+
+
+```powershell
+.\.venv\Scripts\python.exe -m streamlit run main.py
 
 ---
 
