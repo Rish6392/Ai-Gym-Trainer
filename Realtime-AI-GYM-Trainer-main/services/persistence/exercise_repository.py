@@ -106,6 +106,6 @@ def get_users_exercises(user_id):
     conn = _get_connection()
     return conn.execute("""
         SELECT * FROM exercises 
-        WHERE user_id = ?
+        WHERE user_id = ?  
         ORDER BY created_at DESC
     """, (user_id,)).fetchall()  # ← added ORDER BY

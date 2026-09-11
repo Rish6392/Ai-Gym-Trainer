@@ -20,7 +20,7 @@ def inject_local_font(font_path, font_name):
     ext = os.path.splitext(font_path)[1].lstrip(".")
     fmt = {"otf": "opentype"}.get(ext, ext)
     mime = {"otf": "font/otf"}.get(ext, f"font/{ext}")
-     
+
     st.markdown(f"""
         <style>
         @font-face {{
@@ -30,9 +30,7 @@ def inject_local_font(font_path, font_name):
             font-style: normal;
         }}
         </style>
-    """, unsafe_allow_html=True) 
-
-
+    """, unsafe_allow_html=True)
 
 def inject_webrtc_styles():
     font_path = os.path.join(os.getcwd(), "static", "AdobeClean.otf")
